@@ -1,0 +1,6 @@
+name: Hello world
+description: My hello module
+type: module
+core: 8.x
+version: 1.0
+
