@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains mon_module.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mon_module_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mon_module module.
+    case 'help.page.mon_module':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function mon_module_theme() {
+  return [
+    'mon_module' => [
+      'render element' => 'children',
+    ],
+  ];
+}
