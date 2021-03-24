@@ -9,6 +9,7 @@ function hello_world_theme($existing, $type, $theme, $path)
     'hello_template' => [
       'variables' => [
         'description' => [],
+        'title' => [],
       ],
     ],
   ];

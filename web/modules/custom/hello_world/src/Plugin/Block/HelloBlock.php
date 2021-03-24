@@ -20,11 +20,12 @@ class HelloBlock extends BlockBase {
    */
   public function build()
   {
-    return [
-      '#theme' => 'hello_template',
+    $renderable = [
+      '#theme' => "hello_template",
+      '#title' => $this->t('my custom block title'),
       '#description' => 'my hello block',
-      '#attributes' => [],
     ];
+    return $renderable;
   }
 
 }
